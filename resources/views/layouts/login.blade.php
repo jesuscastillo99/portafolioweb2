@@ -15,7 +15,7 @@
                       <div class="text-center">
                         <img src="{{ asset('assets/images/logo-itabec.png')}}"
                            alt="logo-itabec" class="img-responsive" id="img-logo">
-                        <h2 class="mt-5 mb-5 pb-1 titulo-login">Bienvenido al Sistema de Registros de Soporte Técnico</h2>
+                        <h2 class="mt-5 mb-5 pb-1 titulo-login">Bienvenido al Sistema de Captura de Evidencias para el SICOIN</h2>
                       </div>
                       
                       <form method="POST" action="{{ route('login') }}">
@@ -23,35 +23,36 @@
                         <p class="text-center"><strong>Por favor inicia sesión con tus datos:</strong></p>
       
                         <div class="form-outline mb-4">
-                          <label class="form-label" for="inputCurp">CURP:</label>
-                          <input type="text" name="curp" id="inputCurp" value="{{ old('curp') }}" class="form-control"
+                          <label class="form-label" for="correo">Correo:</label>
+                          <input type="email" name="correo" id="correo" value="{{ old('correo') }}" class="form-control"
                             placeholder="" />
-                            @error('curp')
+                            @error('correo')
                             <p class="text-danger">{{ $message }}</p>
                             @enderror
                           
                         </div>
       
                         <div class="form-outline mb-4">
-                          <label class="form-label" for="inputCorreo">CORREO:</label>
-                          <input type="email" name="correo" id="inputCorreo" value="{{ old('correo') }}" class="form-control" 
+                          <label class="form-label" for="contraseña">Contraseña:</label>
+                          <input type="password" name="contraseña" id="contraseña" value="{{ old('contraseña') }}" class="form-control" maxlength="8"
                             placeholder=""/>
-                            @error('correo')
+                            @error('contraseña')
                             <p class="text-danger">{{ $message }}</p>
                             @enderror
                           
                         </div>
 
-                        <div class="text-center pt-1 mb-5 pb-1">
+                        <div class="text-center pt-1 mb-2 pb-1">
+                          <button class="fill rounded mt-2" type="submit">INICIAR SESIÓN</button>                  
+                        </div>
+                        {{-- <div class="text-center pt-1 mb-5 pb-1">
                           <a class="text-muted" href="#">¿Has olvidado tu contraseña?</a>
-                          <button class="fill rounded mt-2" type="submit">INICIAR SESIÓN</button>
-                          
                         </div>
       
                         <div class="d-flex align-items-center justify-content-center pb-4">
                           <p class="mb-0 me-2">¿No tienes cuenta?</p>
                           <button class="fill rounded" type="button" onclick="window.location.href='{{ route('registro') }}'">Crear cuenta</button>
-                        </div>
+                        </div> --}}
       
                       </form>
                       @if ($errors->any())

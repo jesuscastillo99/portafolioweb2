@@ -16,25 +16,22 @@ class LoginController extends Controller
     }
 
 
-    // Método para procesar el inicio de sesión
     public function login(Request $request)
     {
-        // Validación de los campos 'curp' y 'correo'
+        // Validación de los campos 'correo' y 'contraseña'
         $request->validate([
-            'curp' => 'required',
             'correo' => 'required|email',
+            'contraseña' => 'required',
         ]);
 
-        // Obtener el usuario por 'curp' y 'correo'
-        $usuario = Usuario::where('curp', $request->curp)
-            ->where('correo', $request->correo)
-            //->where('activo', 1)
+        // Obtener el usuario por 'correo' y 'contraseña'
+        $usuario = Usuario::where('correo', $request->correo)
+            ->where('contraseña', $request->contraseña)
             ->first();
         
-            //dd($usuario);
-         // Verificar si el usuario fue encontrado
+        // Verificar si el usuario fue encontrado
         if (!$usuario) {
-            return back()->withErrors(['error' => 'El CURP y el correo electrónico no coinciden.']);
+            return back()->withErrors(['error' => 'El correo y la contraseña no coinciden.']);
         }
 
         // Verificar si el usuario está activo
@@ -42,17 +39,23 @@ class LoginController extends Controller
             return back()->withErrors(['error' => 'Debes activar tu cuenta antes de poder iniciar sesión.']);
         }
 
+        // Autenticar al usuario manualmente
+        Auth::login($usuario);
 
-            // Autenticar al usuario manualmente
-            Auth::login($usuario);
+        // Verificar el rol del usuario y redirigir a la ruta correspondiente
+        if ($usuario->role == 1) {
+            // Redirigir al administrador
             alert()
-            ->success('Inicio de sesión exitosa', 'Bienvenido al sistema de crédito educativo')
+            ->success('Inicio de sesión exitosa', 'Bienvenido al sistema ADMINISTRADOR')
             ->showConfirmButton('Comenzar', '#3085d6');
-         
-            // Autenticación exitosa
-            return redirect()->intended('inicio'); // Redirige al usuario a la página deseada
-         
-            
+            return redirect()->route('inicioadmin');
+        } else {
+            // Redirigir al usuario común
+            alert()
+            ->success('Inicio de sesión exitosa', 'Bienvenido al sistema USUARIO')
+            ->showConfirmButton('Comenzar', '#3085d6');
+            return redirect()->route('iniciou');
+        }
     }
 
     // Método para cerrar sesión
@@ -62,7 +65,7 @@ class LoginController extends Controller
         $request->session()->invalidate(); // Invalida la sesión
         $request->session()->regenerateToken(); // Regenera el token CSRF
 
-        return redirect('login'); // Redirige al usuario a la página deseada después de cerrar sesión
+        return redirect('/login'); // Redirige al usuario a la página deseada después de cerrar sesión
     }
     
 }
