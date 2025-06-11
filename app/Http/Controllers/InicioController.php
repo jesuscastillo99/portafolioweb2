@@ -11,25 +11,7 @@ class InicioController extends Controller
         return view('layouts.inicio');
     }
 
-    public function mostrarPublicacionesRecientes()
-    {
-        // Obtener las 4 publicaciones más recientes
-        $publicaciones = Publicacion::orderBy('fechap', 'desc')
-                                    ->take(3)
-                                    ->get();
-
-        return view('layouts.inicio', compact('publicaciones'));
-    }
-
-    public function mostrarPublicacionesRecientes2()
-    {
-        // Obtener las 4 publicaciones más recientes
-        $publicaciones = Publicacion::orderBy('fechap', 'desc')
-                                    ->take(3)
-                                    ->get();
-
-        return view('usuario.inicio', compact('publicaciones'));
-    }
+    
 
     public function mostrarInicio()
     {

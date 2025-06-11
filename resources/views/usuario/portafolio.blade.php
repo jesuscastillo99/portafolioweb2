@@ -66,8 +66,8 @@
               <div class="card bgrosa">
                   <img src="{{ asset('assets/images/itabec.png')}}" class="card-img-top" alt="Proyecto 5">
                   <div class="card-body text-center">
-                      <h5 class="card-title">Sistema de Créditos Educativos (en desarrollo)</h5>
-                      <p class="card-text">Página web para solicitar créditos educativos a nivel estatal(Tamaulipas).</p>
+                      <h5 class="card-title">Sistema de Evidencias</h5>
+                      <p class="card-text">Página web para verificar evidencias a nivel interno dentro del instituto ITABEC.</p>
                       <a href="enlace_proyecto5" target="_blank" class="btn btn-primary">Ver en GitHub</a>
                   </div>
               </div>
