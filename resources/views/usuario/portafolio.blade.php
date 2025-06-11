@@ -1,5 +1,5 @@
 @extends('usuario.landing')
-@section('title', 'Cartera')
+@section('title', 'Portafolio')
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @include('sweetalert::alert')
@@ -79,7 +79,7 @@
                   <img src="{{ asset('assets/images/itabec.png')}}" class="card-img-top" alt="Proyecto 6">
                   <div class="card-body text-center">
                       <h5 class="card-title">Sistema de Créditos Educativos (en desarrollo)</h5>
-                      <p class="card-text">Página web para solicitar créditos educativos a nivel estatal(Tamaulipas).</p>
+                      <p class="card-text">Página web interna para administrar créditos educativos (Tamaulipas).</p>
                       <a href="enlace_proyecto5" target="_blank" class="btn btn-primary">Ver en GitHub</a>
                   </div>
               </div>

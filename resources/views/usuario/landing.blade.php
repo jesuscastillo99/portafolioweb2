@@ -46,19 +46,19 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'cobranza' ? 'active' : '' }}" href="{{ route('sobremi') }}">Sobre mí</a>
+                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'sobremi' ? 'active' : '' }}" href="{{ route('sobremi') }}">Sobre mí</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'cartera' ? 'active' : '' }}" href="{{ route('portafolio') }}">Portafolio</a>
+                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'portafolio' ? 'active' : '' }}" href="{{ route('portafolio') }}">Portafolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'pagos' ? 'active' : '' }}" href="{{ route('educacion') }}">Educación</a>
+                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'educacion' ? 'active' : '' }}" href="{{ route('educacion') }}">Educación</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'contratos' ? 'active' : '' }}" href="{{ route('habilidades') }}">Habilidades</a>
+                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'habilidades' ? 'active' : '' }}" href="{{ route('habilidades') }}">Habilidades</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'seguimiento' ? 'active' : '' }}" href="{{ route('contacto') }}">Contacto</a>
+                    <a class="nav-link mx-lg-2 {{ Route::currentRouteName() == 'contacto' ? 'active' : '' }}" href="{{ route('contacto') }}">Contacto</a>
                 </li>
                 
 

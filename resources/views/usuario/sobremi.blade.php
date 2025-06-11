@@ -1,5 +1,5 @@
 @extends('usuario.landing')
-@section('title', 'Cobranza')
+@section('title', 'Sobre mi')
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @include('sweetalert::alert')
