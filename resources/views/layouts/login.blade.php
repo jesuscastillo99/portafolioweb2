@@ -3,7 +3,7 @@
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @include('sweetalert::alert')
-    <section class="h-100 gradient-form" style="background-color: #eee;">
+    <section class="container-fluid bg-light d-flex justify-content-center align-items-center min-vh-100" style="background-color: #eee;">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-10">
@@ -13,14 +13,14 @@
                     <div class="card-body p-md-5 mx-md-4">
       
                       <div class="text-center">
-                        <img src="{{ asset('assets/images/logo-itabec.png')}}"
+                        <img src="{{ asset('assets/images/logo-zelda.png')}}"
                            alt="logo-itabec" class="img-responsive" id="img-logo">
-                        <h2 class="mt-5 mb-5 pb-1 titulo-login">Bienvenido al Sistema de Captura de Evidencias para el SICOIN</h2>
+                        <h2 class="mt-5 mb-5 pb-1 titulo-login">Bienvenido mi Portafolio Web</h2>
                       </div>
                       
-                      <form method="POST" action="{{ route('login') }}">
+                      <form action="{{ route('login2') }}" method="POST">
                         @csrf
-                        <p class="text-center"><strong>Por favor inicia sesión con tus datos:</strong></p>
+                        <p class="text-center"><strong>Por favor inicia sesión con tu cuenta:</strong></p>
       
                         <div class="form-outline mb-4">
                           <label class="form-label" for="correo">Correo:</label>
@@ -33,10 +33,10 @@
                         </div>
       
                         <div class="form-outline mb-4">
-                          <label class="form-label" for="contraseña">Contraseña:</label>
-                          <input type="password" name="contraseña" id="contraseña" value="{{ old('contraseña') }}" class="form-control" maxlength="8"
+                          <label class="form-label" for="contra">Contraseña:</label>
+                          <input type="password" name="contra" id="contra" value="{{ old('contra') }}" class="form-control" maxlength="50"
                             placeholder=""/>
-                            @error('contraseña')
+                            @error('contra')
                             <p class="text-danger">{{ $message }}</p>
                             @enderror
                           
@@ -68,14 +68,13 @@
                   </div>
                   <div class="col-lg-6 d-flex align-items-center gradient-custom-2 text-center">
                     <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                      <h4 class="mb-4">CONÓCENOS</h4>
-                      <p class="small mb-0 text-white">El Instituto Tamaulipeco de Becas, Estímulos y Créditos Educativo (ITABEC) 
-                        es un organismo público descentralizado con personalidad jurídica y patrimonio propio, adscrito sectorialmente a la Secretaría de Educación.
+                      <h4 class="mb-4 ">Mi portafolio web</h4>
+                      <p class="small mb-0 text-white "> La siguiente página web está destinada para recabar información de mis proyectos de programación a lo largo de mi carrera.
                       </p>
-                        <img src="{{ asset('assets/images/conocenos.png')}}"
-                        alt="img-conocenos" class="img-fluid rounded mt-5" id="img-conocenos">
-                        <img src="{{ asset('assets/images/conocenos2.png')}}"
-                        alt="img-conocenos" class="img-fluid rounded mt-5" id="img-conocenos">
+                        <img src="{{ asset('assets/images/zeldalogin1.png')}}"
+                        alt="img-conocenos" class="img-fluid rounded mt-5 " id="img-conocenos">
+                        <img src="{{ asset('assets/images/zeldalg2.png')}}"
+                        alt="img-conocenos" class="img-fluid rounded mt-5 " id="img-conocenos">
                     </div>
                   </div>
                 </div>

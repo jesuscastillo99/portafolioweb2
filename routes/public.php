@@ -13,11 +13,24 @@ use App\Http\Controllers\TrimestresController;
 use App\Http\Controllers\EvidenciasController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\CobranzaController;
+use App\Http\Controllers\CarteraController;
+use App\Http\Controllers\PagosController;
+use App\Http\Controllers\ContratosController;
+use App\Http\Controllers\SeguimientoController;
+use App\Http\Controllers\ConsultasController;
+use App\Http\Controllers\CatalogosController;
+use App\Http\Controllers\SeguridadController;
+use App\Http\Controllers\Promocion;
+use App\Http\Controllers\PromocionController;
 use App\Http\Controllers\UbicacionController;
 use App\Http\Controllers\VistasController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Auth;
 //Rutas inicio
 //Route::get('/admin/inicio', [InicioController::class, 'index'])->name('inicioadmin')->middleware('auth');
+
+//HOLA JEJE :)
 
 //Ruta para cargar el inicio del administrador
 Route::get('/admin/inicio', [InicioController::class, 'mostrarPublicacionesRecientes'])->name('inicioadmin')->middleware('auth', 'admin');
@@ -27,13 +40,12 @@ Route::get('/login', function() {
     return view('layouts.login');
 })->name('login')->middleware('guest');
 
-//Ruta para iniciar sesión ya sea administrador o usuario común
-Route::post('/login', [LoginController::class, 'login']);
+// //Ruta para iniciar sesión ya sea administrador o usuario común
+Route::post('/login', [LoginController::class, 'login'])->name('login2');
 
-//Rutas logout
+// //Rutas logout
 Route::get('/logout', function() {
-    return view('layouts.login');
-})->name('logout');
+     return view('layouts.login'); })->name('logout');
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout2');
 
@@ -95,8 +107,6 @@ Route::get('/accesodenegado', function() {
 //Ruta para chatgpt
 //Route::get('/admin/chat', [EvidenciasController::class, 'mostrarChat'])->name('chat')->middleware('auth');
 
-
-
 Route::get('admin/chat', function () {
     return view('layouts.noticiasadmin');
 })->name('chat.index');
@@ -106,11 +116,43 @@ Route::post('/chat/ask', [ChatController::class, 'ask'])->name('chat.ask')->midd
 
 // AQUI COMIENZAN LAS RUTAS DE USUARIO COMÚN
 
-//Ruta inicio usuario
 
-//Ruta inicio usuario
-Route::get('/inicio', [InicioController::class, 'mostrarPublicacionesRecientes2'])->name('iniciou')->middleware('auth');
+Route::get('/inicio', [InicioController::class, 'mostrarInicio'])->name('inicio')->middleware('auth');
+//Rutas de Promocion
 
+Route::get('/promocion', [PromocionController::class, 'mostrarPromocion'])->name('promocion')->middleware('auth');
+
+//Rutas cobranza 
+Route::get('/cobranza', [CobranzaController::class, 'mostrarCobranza'])->name('cobranza')->middleware('auth');
+
+//Rutas cartera
+Route::get('/cartera', [CarteraController::class, 'mostrarCartera'])->name('cartera')->middleware('auth');
+
+//Rutas pagos
+Route::get('/pagos', [PagosController::class, 'mostrarPagos'])->name('pagos')->middleware('auth');
+
+//Rutas contratos
+Route::get('/contratos', [ContratosController::class, 'mostrarContratos'])->name('contratos')->middleware('auth');
+
+//Rutas seguimiento
+Route::get('/seguimiento', [SeguimientoController::class, 'mostrarSeguimiento'])->name('seguimiento')->middleware('auth');
+
+//Rutas catalogos
+Route::get('/catalogos', [CatalogosController::class, 'mostrarCatalogos'])->name('catalogos')->middleware('auth');
+
+//Rutas seguridad
+Route::get('/seguridad', [SeguridadController::class, 'mostrarSeguridad'])->name('seguridad')->middleware('auth');
+
+
+
+
+
+
+
+
+
+
+Route::get('/mostrarpublicaciones', [PublicacionController::class, 'mostrarTodasPublicaciones2'])->name('mostrarpublis2')->middleware('auth');
 //Ruta para mostrar los trimestres 
 Route::get('/trimestreu', [TrimestresController::class, 'index2'])->name('trimestreu')->middleware('auth');
 

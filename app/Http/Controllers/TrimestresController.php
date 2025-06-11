@@ -13,8 +13,8 @@ class TrimestresController extends Controller
     // MOSTRAR ELEMENTOS POR DIRECCION
     public function index($iddireccion)
     {
-       // Obtener todas las direcciones
-        $trimestres = Trimestre::all();
+       // Obtener todas los trimestres ordenados por fecha
+       $trimestres = Trimestre::orderBy('idtrimestre', 'desc')->get();
 
         // Retornar las trimestres a la vista (o realizar otra operación según sea necesario)
         return view('layouts.trimestres', compact('iddireccion','trimestres'));
@@ -28,8 +28,8 @@ class TrimestresController extends Controller
         // Obtener la iddireccion del usuario autenticado
         $iddireccion = $usuario->iddireccion;
 
-        // Obtener todas las direcciones
-        $trimestres = Trimestre::all();
+        // Obtener todos los trimestres ordenados por fecha
+        $trimestres = Trimestre::orderBy('idtrimestre', 'desc')->get();
         //dd($iddireccion);
         // Retornar los trimestres filtrados a la vista
         return view('usuario.trimestreu', compact('iddireccion', 'trimestres'));

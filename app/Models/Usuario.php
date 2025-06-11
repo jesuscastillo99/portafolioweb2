@@ -19,12 +19,13 @@ class Usuario extends Model implements Authenticatable
     use HasFactory;
     public $timestamps = false;
     protected $table = 'usuarios'; // Nombre de la tabla en la base de datos
-    protected $primaryKey = 'idlog';
-    protected $fillable = ['correo', 'contraseña', 'activo', 'act_token', 'role'];
+    protected $primaryKey = 'idusuario';
+    protected $fillable = ['correo', 'contra'];
 
-    public function isAdmin()
-    {
-        return $this->role === 1;
-    }
+    //Función para determinar si es administrador o no
+    // public function isAdmin()
+    // {
+    //     return $this->role === 1;
+    // }
 
 }

@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="{{ asset('assets/custom.css')}}" />
     <link rel="stylesheet" href="{{ asset('assets/style.css')}}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -47,7 +49,6 @@
                     <li><a class="nav-link" href="{{ route('direcciones') }}">Ver evidencias</a></li>
                     <li><a class="nav-link" href="{{ route('publicaciones.index') }}">Crear Publicaciones</a></li>
                     <li><a class="nav-link" href="{{ route('elementos') }}">Elementos de Control</a></li>
-                    <li><a class="nav-link" href="{{ route('chat.index') }}">¿Tienes dudas?</a></li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
@@ -151,7 +152,7 @@
     <script src="{{ asset('assets/js/jquery.pogo-slider.min.js')}}"></script>
     <script src="{{ asset('assets/js/slider-index.js')}}"></script>
     <script src="{{ asset('assets/js/mayus.js')}}"></script>
-    <script src="{{ asset('assets/js/smoothscroll.js')}}"></script>
+    {{-- <script src="{{ asset('assets/js/smoothscroll.js')}}"></script> --}}
     <script src="{{ asset('assets/js/isotope.min.js')}}"></script>
     <script src="{{ asset('assets/js/images-loded.min.js')}}"></script>
     <script src="{{ asset('assets/js/custom.js')}}"></script>

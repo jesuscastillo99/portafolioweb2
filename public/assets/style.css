@@ -320,7 +320,7 @@ button:focus {
 	letter-spacing: 1px;
 	text-align: center;
 	line-height: 40px;
-	color: #ffffff;
+	color: #ab0033;
 	font-weight: 900;
 	border-radius: 100%;
 }
@@ -339,6 +339,7 @@ button:focus {
 
 
 .top-header .navbar {
+	border-radius: 0 0 60px 60px;
 	padding: 5px 0px;
 	
 }
@@ -348,12 +349,13 @@ button:focus {
     top: 0px;
     left: 0px;
 	width: 100%;
-    z-index: 20;
-    background-position: left;
+    z-index: 0;
+    background-position: center;
     background-repeat: no-repeat;
-    background-color: #fff;
+    background-color: #ffffff;
     background-size: auto 100%;
-    margin: 0 5%;
+    margin: 0 0% 70px;
+	
 }
 
 .top-header .navbar .navbar-collapse ul li a {
@@ -378,8 +380,9 @@ a.navbar-brand img {
 .top-header .navbar .navbar-collapse ul li a.active {}
 .top-header .navbar .navbar-collapse ul li a:hover,
 .top-header .navbar .navbar-collapse ul li a:focus {
-	background: transparent;
+	/* background: transparent; */
 	color: #A91B41;
+	
 }
 
 .search_icon.nav-link img {
@@ -405,8 +408,8 @@ a.navbar-brand img {
     margin: 0;
 }
 
-.navbar-toggler {
-	border: 2px solid #ab0033 !important;
+/* .navbar-toggler {
+	border: 2px solid #000000 !important;
 	border-radius: 0;
 	margin: 15px 15px;
 	padding: 8px 8px;
@@ -414,10 +417,10 @@ a.navbar-brand img {
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
-}
+} */
 
-.navbar-toggler span {
-	background: #ab0033;
+/* .navbar-toggler span {
+	background: #000000;
 	display: block;
 	width: 22px;
 	height: 2px;
@@ -431,19 +434,19 @@ a.navbar-brand img {
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
-}
+} */
 
-.navbar-toggler span+span {
+/* .navbar-toggler span+span {
 	margin-top: 5px;
-}
+} */
 
-.navbar-toggler:hover {
-	border: 2px solid #ab0033;
-}
+/* .navbar-toggler:hover {
+	border: 2px solid #000000;
+} */
 
-.navbar-toggler:hover span {
-	background: #ab0033;
-}
+/* .navbar-toggler:hover span {
+	background: #000000;
+} */
 
 .tab_menu {
     overflow: scroll;
@@ -1996,14 +1999,14 @@ ul.social_icon li {
 }
 
 .footer_bottom {
-    background: #DFB974;
+    background: #017e01;
     padding: 15px 0;
 }
 
 .footer_bottom p.crp {
     float: left;
     margin: 0;
-    color: #000000;
+    color: #fff;
     font-size: 15px;
     width: 100%;
     text-align: center;

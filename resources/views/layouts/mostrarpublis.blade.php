@@ -21,7 +21,7 @@
                     <h5 class="card-title">{{ $pub->titulo }}</h5>
                     <p class="card-text ">{{ $pub->cuerpo }}</p>
                     <p class="card-text">{{ $pub->fechap }}</p>
-                    <a href="{{ $pub->enlace }}" class="btn btn-primary">Ver Enlace</a>
+                    <a href="{{ $pub->enlace }}" class="text-primary fw-bold" target="_blank">Ver Enlace Adjunto</a>
                 </div>
             </div>
         </div>

@@ -3,10 +3,10 @@
     background: #fccb90;
     
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(90deg, rgba(171,0,51,1) 80%, rgba(171,0,51,1) 100%);
+    background: linear-gradient(90deg, rgb(1, 126, 1) 80%, rgba(1, 126, 1) 100%);
     
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(90deg,  rgba(171,0,51,1) 80%, rgba(171,0,51,1) 100%);
+    background: linear-gradient(90deg,  rgba(1, 126, 1) 80%, rgba(1, 126, 1) 100%);
     }
     
 @media (min-width: 768px) {
@@ -39,8 +39,8 @@
 }
 
 .fill {
-  --color: #ab0033;
-  --hover: #ab0033;
+  --color: #017e01;
+  --hover: #017e01;
 }
 
 button {
@@ -59,12 +59,12 @@ button {
     border: 2px solid;
     font: inherit;
     line-height: 1;
-    margin: 0.5em;
+    margin: 0.5em; 
     padding: 0.5em 0.5em;
   }
 
   .titulo-login {
-    color: #ab0033;
+    color: #017e01;
   }
 
   @media (max-width: 767px) {
@@ -91,6 +91,11 @@ button {
 .btn-form {
   color: white;
   background-color: #ab0033;
+}
+
+.btn-form2 {
+  color: white;
+  background-color: #00AAE4;
 }
 
 .boton {
@@ -219,16 +224,17 @@ button {
 
 /* CAMBIA EL DISEÑO DEL BOTON DE CERRAR SESION */
 .logout-button a {
-  background-color: rgba(235, 6, 6, 0.438); /* Rojo con 70% de opacidad */
+  background-color: rgb(223, 185, 116); /* Rojo con 70% de opacidad */
   color: #fff; /* Color del texto blanco */
-  padding: 8px 16px; /* Espaciado interno */
+  font-size: 8px; /* Reduce el tamaño de la fuente */
+  padding: 5px 10px; /* Ajusta el padding para hacerlo más pequeño */
   border-radius: 25px; /* Bordes redondeados */
   transition: background-color 0.3s ease; /* Transición suave */
   text-align: center; /* Alinear texto al centro */
 }
 
 .logout-button a:hover {
-  background-color: rgba(200, 35, 51, 0.7); /* Rojo más oscuro con 70% de opacidad al pasar el ratón */
+  background-color: rgba(255, 255, 255, 0.7); /* Rojo más oscuro con 70% de opacidad al pasar el ratón */
   color: #fff; /* Mantener el color del texto blanco al pasar el ratón */
   text-decoration: none; /* Quitar subrayado */
 }
@@ -264,10 +270,435 @@ button {
 
 /* AJUSTAR TAMAÑO DEL MODAL */
 .modal-custom-size {
-  max-width: 90%; /* 90% del ancho de la pantalla */
+  max-width: 90%; /* 90% del ancho de la pan
+  .talla */
 }
 
 .modal-body iframe {
   height: 700px; /* Ajustar la altura del iframe */
 }
 
+
+
+
+.bold-text {
+  font-weight: bold;
+}
+
+.nav-item img { 
+  width: 24px; height: 24px; 
+}
+.ribbon-section { 
+  padding: 10px; border-right: 1px solid #ddd; 
+}
+
+/* BOTONES DE LA BARRA DE NAVEGACION */
+.btncool {
+  --btn-color: rgb(171, 0, 51);
+  --btn-bg: rgb(223, 185, 116);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 14px 22px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: system-ui;
+  border: 2px solid var(--btn-color);
+  transition: 100ms ease;
+  box-shadow: 5px 5px 0 0 var(--btn-color);
+}
+
+.btn--secondary {
+  --btn-color: #444;
+  --btn-bg: #fafafa;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 0 0 var(--btn-color);
+}
+
+.btn:active {
+  transition: 50ms ease;
+  box-shadow:  0 0 0 0 var(--btn-color);
+}
+
+.btn:focus-visible {
+  outline: 0;
+  --btn-color: #002cc8;
+}
+
+.btn:focus-visible::after {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 12px);
+  transform: translateX(-50%);
+  content: "\21E7";
+  animation: float .5s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translateX(-50%) translatey(0px);
+	}
+	50% {
+		transform: translateX(-50%) translatey(-6px);
+	}
+	100% {
+		transform: translateX(-50%) translatey(0px);
+	}
+}
+
+/* COLORES PRINCIPALES */
+.bg-amarillo {
+  background-color: #dfba749d;
+}
+
+.navbar {
+  background-color: #ab0033;
+  height: 80px;
+  margin: 0px;
+  border-radius: 16px;
+  padding: 0.5rem;
+}
+.navbar-brand {
+  font-weight: 500;
+  color: #a91b41;
+  font-size: 24px;
+  transition: 0.3s color;
+}
+
+/* CODIGO PARA LA BARRA DE NAVEGACION CHIDA */
+.login-button {
+  background-color: #017e01;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+
+.login-button:hover {
+  background-color: #70c970;
+  color: #fff;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.navbar-toggler span {
+  color: #000; /* Cambia este valor al color que desees (por ejemplo, negro) */
+}
+
+.navbar-toggler:hover span {
+  color: #000 !important; /* Asegura que el color no cambie */
+}
+
+.navbar-toggler:focus span,
+.navbar-toggler:active span {
+    color: #000 !important; /* Cambia al color deseado */
+}
+
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+
+
+
+.nav-link:hover, .nav-link.active {
+  color: #000;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #017e01;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before {
+      width: 100%;
+      visibility: visible;
+    }
+
+}
+
+/* CODIGO DEBAJO DEL NAV */
+
+.menu-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Reducido para juntar más los botones */
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.menu-icons p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px; /* Reducido el padding para hacer los botones más compactos */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  width: fit-content; /* Se ajusta al tamaño del texto */
+  transition: transform 0.2s;
+}
+
+.menu-icons p:hover {
+  transform: scale(1.05); /* Efecto hover sutil */
+}
+
+.menu-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .menu-icons p {
+    min-width: 120px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-icons {
+    justify-content: center;
+  }
+
+  .menu-icons p {
+    min-width: 100px;
+    font-size: 12px;
+  }
+}
+
+/* CÓDIGO PARA LA ANIMACIÓ  DEL PÁRRAFO */
+/* Estilo opcional para que parezca una máquina de escribir */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid #00F0B5; /* Simula un cursor de máquina de escribir */
+    white-space: nowrap;
+    margin: left;
+    letter-spacing: 0.1em;
+    
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/*CODIGO PARA EL BOTON DE DESCARGA DEL CV */
+.button-53 {
+    background-color: #3DD1E7;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-53:focus {
+    outline: 0;
+  }
+  
+  .button-53:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+  }
+  
+  .button-53:hover:after {
+    bottom: 2px;
+    left: 2px;
+  }
+  
+  @media (min-width: 768px) {
+    .button-53 {
+      padding: .75rem 3rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  .asinunderline {
+    text-decoration: none;
+  }
+
+  /* ESTILOS PARA LA MINIGALERIA DE SOBRE MI */
+.imagen-con-efecto {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.imagen-con-efecto:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    transform: scale(1.3);
+}
+
+.imagen-rotada {
+    transform: rotate(10deg);
+}
+.imagen-rotadainversa {
+    transform: rotate(-10deg);
+}
+
+.zoomimg:hover {
+    transform: scale(1.1);
+}
+
+/*ESTILOS EN LAS CARDS DEL PORTAFOLIO Y COLORES */
+.bgrosa {
+    background-color: #F61067;
+}
+.bgmorado {
+    background-color: #5E239D;
+}
+.bgcmorado{
+    border: 2px solid #F61067;
+}
+
+.colort {
+    color: #00F0B5;
+}
+
+/*CONTENEDORES CON SOMBRA */
+.contenedorsombra {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease-in-out; /* Ajusta el valor de sombra según tu preferencia */
+}
+
+.contenedorsombra:hover {
+    transform: scale(1.1);
+}
+
+/*ESTILOS PARA LA IMAGEN DE LANDING*/
+article {
+    position: relative;
+    width: 250px;
+    transition: all .3s ease;
+}
+
+article img:first-child {
+    box-shadow: 0 60px 60px
+    -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+}
+
+article img:last-child {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+}
+
+article:hover {
+    transform: 
+        perspective(250px)
+        rotateX(10deg)
+        translateY(-5%)
+        translateZ(0);
+}
+
+article::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image:
+    linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(246, 16, 103, 0.5) 50%,
+        rgb(246, 16, 103) 95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover::before {
+    opacity: 1;
+}
+
+article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+/*Modificar iconos de contacto */
+i {
+    font-size: 23px;
+}

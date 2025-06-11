@@ -147,6 +147,7 @@ public function index2()
  // Método para mostrar los elementos
  public function mostrarElementos2($iddireccion, $idtrimestre)
  {
+    
      // Obtener los elementos por iddireccion
      $elementos = Elemento::whereIn('idelemento', function($query) use ($iddireccion) {
          $query->select('idelemento')
@@ -169,7 +170,7 @@ public function index2()
          // Añadir un atributo a cada elemento para la vista
          $elemento->isGreen = $todasEstadoapUno;
      }
- 
+     
      return view('usuario.elementos2', compact('elementos', 'iddireccion', 'idtrimestre'));
  }
 

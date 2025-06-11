@@ -30,4 +30,13 @@ class InicioController extends Controller
 
         return view('usuario.inicio', compact('publicaciones'));
     }
+
+    public function mostrarInicio()
+    {
+        
+
+        return view('usuario.inicio');
+    }
+
+    
 }

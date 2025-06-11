@@ -39,7 +39,7 @@ class EvidenciasController extends Controller
                                 ->get();
 
         $evidenciasCount = $evidencias->count(); // Contar los registros obtenidos
-
+        
         // Retornar la vista con las evidencias filtradas
         return view('usuario.evidenciasu', compact('evidencias', 'idtrimestre', 'idelemento', 'iddireccion', 'evidenciasCount'));
     }
@@ -50,6 +50,7 @@ class EvidenciasController extends Controller
         $nuevaEvidencia->iddireccion = $iddireccion;
         $nuevaEvidencia->idtrimestre = $idtrimestre;
         $nuevaEvidencia->idelemento = $idelemento;
+        $nuevaEvidencia->estadoap = 1;
         $nuevaEvidencia->save();
         return redirect()->back()->with('success', 'Evidencia agregada.');
     }

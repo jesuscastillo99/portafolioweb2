@@ -21,29 +21,28 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('assets/custom.css')}}" />
     <link rel="stylesheet" href="{{ asset('assets/style.css')}}" />
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 <!-- Start header -->
 <header class="top-header">
-    <nav class="navbar header-nav navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('inicioadmin') }}"><img src="{{ asset('assets/images/logo-itabec.png')}}" class="img-responsive" alt="img_logoitabec"></a>
-            
-            <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li><a class="nav-link active" href="{{ route('inicioadmin') }}">Inicio</a></li>
-                    <li><a class="nav-link" href="{{ route('direcciones') }}">Ver evidencias</a></li>
-                    <li><a class="nav-link" href="{{ route('publicaciones.index') }}">Crear Publicaciones</a></li>
-                    <li><a class="nav-link" href="{{ route('elementos') }}">Elementos de Control</a></li>
-                    <li><a class="nav-link" href="{{ route('chat.index') }}">¿Tienes dudas?</a></li>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                    <li class="nav-item logout-button"><a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Cerrar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">JESUS CASTILLO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SOBRE MÍ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PORTAFOLIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">EDUCACION</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">HABILIDADES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">CONTACTO</a></li>
                 </ul>
             </div>
-            
         </div>
     </nav>
 </header>
@@ -165,7 +164,7 @@
     <script src="{{ asset('assets/js/jquery.magnific-popup.min.js')}}"></script> 
     <script src="{{ asset('assets/js/jquery.pogo-slider.min.js')}}"></script>
     <script src="{{ asset('assets/js/slider-index.js')}}"></script>
-    <script src="{{ asset('assets/js/smoothscroll.js')}}"></script>
+    {{-- <script src="{{ asset('assets/js/smoothscroll.js')}}"></script> --}}
     <script src="{{ asset('assets/js/isotope.min.js')}}"></script>
     <script src="{{ asset('assets/js/images-loded.min.js')}}"></script>
     <script src="{{ asset('assets/js/custom.js')}}"></script>

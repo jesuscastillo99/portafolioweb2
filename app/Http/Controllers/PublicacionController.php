@@ -143,4 +143,23 @@ class PublicacionController extends Controller
        // Retornar la vista con ambas variables
        return view('layouts.mostrarpublis', compact('publicaciones', 'publicacion'));
     }
+
+    //Para el usuario:
+    //Mostrar todas las publicaciones
+    public function mostrarTodasPublicaciones2(Request $request)
+    {
+       // Obtener todas las publicaciones ordenadas por fecha (más reciente primero)
+       $publicaciones = Publicacion::orderBy('fechap', 'desc')->get();
+
+       // Variable para almacenar la publicación específica si se proporciona en el request
+       $publicacion = null;
+
+       // Si el request contiene la publicación, buscarla por su ID
+       if ($request->has('publicacion')) {
+           $publicacion = Publicacion::find($request->input('publicacion'));
+       }
+
+       // Retornar la vista con ambas variables
+       return view('usuario.mostrarpublis', compact('publicaciones', 'publicacion'));
+    }
 }

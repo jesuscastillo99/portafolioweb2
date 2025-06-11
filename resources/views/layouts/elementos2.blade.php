@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Elemento:</h5>
                         <p class="card-text">{{ $ele->numelemento }}</p>
-                        <a href="{{ route('evidencias', ['iddireccion' => $iddireccion, 'idtrimestre' => $idtrimestre, 'idelemento' => $ele->idelemento]) }}" class="btn btn-primary">Ver Evidencias</a>
+                        <a href="{{ route('evidencias', ['iddireccion' => $iddireccion, 'idtrimestre' => $idtrimestre, 'idelemento' => $ele->idelemento]) }}" class="btn btn-form">Ver Evidencias</a>
                     </div>
                 </div>
             </div>

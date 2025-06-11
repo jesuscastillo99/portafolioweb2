@@ -21,6 +21,7 @@
                         <img src="{{ $publicacion->archivo ? Storage::url($publicacion->archivo) : ''  }}" class="card-img-top" alt="{{ $publicacion->titulo }}">
                         <h3 class="card-title mt-2">{{ $publicacion->titulo }}</h3>
                         <p class="card-text">{{ Str::limit($publicacion->cuerpo, 100) }}</p>
+                        <a href="{{ $publicacion->enlace }}" class="text-primary fw-bold" target="_blank">Ver Enlace Adjunto</a>
                         <p class="card-text"><small class="text-muted">{{ $publicacion->fechap }}</small></p>
                     </div>
                 </div>

@@ -32,12 +32,12 @@
 
                 <div class="mb-3">
                     <label for="archivo" class="form-label">Archivo (Imagen)</label>
-                    <input type="file" class="form-control" name="archivo">
+                    <input type="file" class="form-control" name="archivo" required>
                 </div>
 
                 <div class="mb-3">
                     <label for="enlace" class="form-label">Enlace</label>
-                    <input type="url" class="form-control" name="enlace" value="{{ $publicacion->enlace ?? '' }}">
+                    <input type="url" class="form-control" name="enlace" value="{{ $publicacion->enlace ?? '' }}" required>
                 </div>
 
                 <div class="mb-3">
@@ -50,7 +50,7 @@
                     <input type="number" class="form-control" name="año" value="2024" readonly required>
                 </div>
 
-                <button type="submit" class="btn btn-primary">{{ $publicacion ? 'Actualizar' : 'Crear' }}</button>
+                <button type="submit" class="btn btn-form">{{ $publicacion ? 'Actualizar' : 'Crear' }}</button>
                 @if($publicacion)
                     <a href="{{ route('publicaciones.index') }}" class="btn btn-secondary">Cancelar</a>
                 @endif
@@ -70,7 +70,7 @@
                     <h5 class="card-title">{{ $pub->titulo }}</h5>
                     <p class="card-text text-ajuste1">{{ $pub->cuerpo }}</p>
                     <p class="card-text">{{ $pub->fechap }}</p>
-                    <a href="{{ $pub->enlace }}" class="btn btn-primary">Ver Enlace</a>
+                    <a href="{{ $pub->enlace }}" class="btn btn-form2" target="_blank">Ver Enlace</a>
                     <a href="{{ route('publicaciones.index', ['publicacion' => $pub->idpublicacion]) }}" class="btn btn-warning">Editar</a>
                     <form action="{{ route('publicaciones.destroy', $pub->idpublicacion) }}" method="POST" class="d-inline">
                         @csrf
@@ -83,7 +83,7 @@
         @endforeach
     </div>
     <div class="mb-5">
-        <a href="{{ route('mostrarpublis') }}" class="btn btn-primary">Mostrar todas las publicaciones</a>
+        <a href="{{ route('mostrarpublis') }}" class="btn btn-form">Mostrar todas las publicaciones</a>
     </div>
     
 </div>

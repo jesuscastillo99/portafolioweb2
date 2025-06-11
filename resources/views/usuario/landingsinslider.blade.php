@@ -45,7 +45,7 @@
                 <ul class="navbar-nav">
                     <li><a class="nav-link active" href="{{ route('iniciou') }}">Inicio</a></li>
                     <li><a class="nav-link" href="{{ route('trimestreu') }}">Mis evidencias</a></li>
-                    <li><a class="nav-link" href="#">Notificaciones</a></li>
+                   
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
@@ -81,7 +81,7 @@
                         <ul> 
                             <li><a class="nav-link active" href="{{ route('iniciou') }}">Inicio</a></li>
                             <li><a class="nav-link" href="{{ route('trimestreu') }}">Mis evidencias</a></li>
-                            <li><a class="nav-link" href="#">Notificaciones</a></li>
+                            
                           </ul>
                      </div>
              </div>
@@ -149,7 +149,7 @@
     <script src="{{ asset('assets/js/jquery.pogo-slider.min.js')}}"></script>
     <script src="{{ asset('assets/js/slider-index.js')}}"></script>
     <script src="{{ asset('assets/js/mayus.js')}}"></script>
-    <script src="{{ asset('assets/js/smoothscroll.js')}}"></script>
+    {{-- <script src="{{ asset('assets/js/smoothscroll.js')}}"></script> --}}
     <script src="{{ asset('assets/js/isotope.min.js')}}"></script>
     <script src="{{ asset('assets/js/images-loded.min.js')}}"></script>
     <script src="{{ asset('assets/js/custom.js')}}"></script>

@@ -14,7 +14,7 @@
                         <h5 class="card-title">Trimestre:</h5>
                         <p class="card-text">{{ $tri->meses }}</p>
                         <p class="card-text">{{ $tri->año }}</p>
-                        <a href="{{ route('elementos2', ['iddireccion' => $iddireccion, 'idtrimestre' => $tri->idtrimestre]) }}" class="btn btn-primary">Ver Elementos</a>
+                        <a href="{{ route('elementos2', ['iddireccion' => $iddireccion, 'idtrimestre' => $tri->idtrimestre]) }}" class="btn btn-form">Ver Elementos</a>
                     </div>
                 </div>
             </div>
